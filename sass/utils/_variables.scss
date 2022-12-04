@@ -2,6 +2,7 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$dark-grey: lighten(black, 26%);
+$dark-tertiary: darken($color-tertiary, 40%);
+$dark-grey: lighten(black, 21%);
 $mid-grey: lighten(black, 91%);
-$light-grey: lighten(black, 97%);
+$light-grey: lighten(black, 96%);
