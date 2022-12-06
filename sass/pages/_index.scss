@@ -42,6 +42,10 @@
     list-style: none;
     counter-reset: compteListe; /* initialisation du compteur compteListe à 0 */
     padding: 0;
+    @media screen and (min-width: 768px) {
+      @include flexbox(row, space-around, unset, wrap);
+    }
+
   }
   &__text {
     font-size: 0.9rem;
@@ -49,6 +53,12 @@
     font-weight: 500;
   }
   &__li {
+    @media screen and (min-width: 768px) {
+      width: 40%;
+    }
+    @media screen and (min-width: 875px) {
+      width: 30%;
+    }
     width: 100%;
     padding: 1.3rem 0;
     margin: 1.5rem 0;
@@ -81,15 +91,23 @@
 // Restaurants
 .restaurants {
   background-color: $light-grey;
-  padding: 2rem;
+  padding: 1rem;
+  &__title {
+    margin: 2rem 0 1.2rem 0.7rem;
+  }
+  &__cards {
+    @media screen and (min-width: 768px) {
+      @include flexbox(row, unset, unset, wrap);
+    }
+  }
 }
 
 .restaurant__card {
+  flex: 45%;
   position: relative;
   height: 330px;
   border-radius: 20px;
-  margin: 1.5rem 0; 
- // display: block; 
+  margin: 0.7rem; 
   text-decoration: none;
   background-color: white;
   @include box-shadow(0.2);

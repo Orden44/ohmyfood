@@ -3,6 +3,7 @@
   height: 250px;
   object-fit: cover;
 }
+
 .restaurant {
   background-color: $light-grey;
   border-radius: 35px 35px 0 0 ;
@@ -21,14 +22,21 @@
     @include flexbox(row, center, unset, unset);
     .button {
         width: 195px;
+        margin: 0 1.5rem 2.5rem;
     }
-  }
-   
+  }  
 } 
+
+.menu__card {
+  @media screen and (min-width: 768px) {
+    @include flexbox(row, center, unset, wrap);
+  } 
+}
+
 .menu {
-  animation: menu-sequence ease-in-out 800ms forwards; 
-  // opacity: 0;
-  margin: 0.75rem;
+  animation: menu-sequence ease-in-out 2000ms forwards; 
+  opacity: 0;
+  margin: 0 0.5rem 2rem 0.5rem;
   &__title {
     position: relative;
     padding-bottom: 0.5rem;
@@ -38,7 +46,7 @@
     margin: 0;
     &::after {
       content: "";
-      width: 3rem;
+      width: 2.5rem;
       height: 0.25rem;
       background-color: $color-tertiary;
       position: absolute;
@@ -47,16 +55,18 @@
     }
   }
   &__detail {
+    @media screen and (min-width: 768px) {
+      width: 358px;
+    }
+    @include box-shadow(0.1);
     display: flex;
     background-color: white;
     border-radius: 1rem;
-    //  height: 70px;
-    //   overflow: hidden;
     margin: 0.9rem 0;
     @for $i from 1 to 10 {
-      &__#{$i} {
-        animation-delay: 300ms * $i;
-      }
+        &__#{$i} {
+            animation-delay: 1000ms * $i;
+         }
     }
     &__description {
       overflow: hidden;
@@ -74,13 +84,14 @@
       overflow: hidden;
       white-space: nowrap;
       margin-top: 0.3rem;
+      font-size: 0.9rem;
     }
     &__price {
       font-weight: 500;
+      font-size: 0.9rem;
       display: flex;
-      //     justify-content: flex-end;
       align-items: flex-end;
-      margin: 0.75rem;
+      margin: 0.75rem 1.5rem;
     }
     &__valid {
       display:flex;
@@ -92,7 +103,6 @@
       transition: all 400ms ease-in-out;
       transform: translateX(100%);
     }
-
     &:active &__valid, &:hover &__valid  {
       width: 3.5rem;
       transform: translateX(0);
@@ -104,22 +114,18 @@
       background-color: white;
       border-radius: 100px;
     }
-
     &:active &__icon, &:hover &__icon {
       transform: rotate(0);
       opacity: 1;
     }
-
-
   }
 }
+
 @keyframes menu-sequence {
   0%{
       opacity:0;
-  //    transform: translateY(30px);
   }
   100% {
       opacity: 1;
   }
 }
-

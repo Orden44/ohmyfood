@@ -118,7 +118,7 @@ p {
   margin: auto;
   color: white;
   background-color: #363636;
-  padding: 0.5rem 1rem 1.5rem 1.5rem;
+  padding: 1.5rem 1rem 1.5rem 1.5rem;
 }
 .footer__logo {
   font-family: "Shrikhand", cursive;
@@ -193,6 +193,15 @@ p {
   counter-reset: compteListe; /* initialisation du compteur compteListe à 0 */
   padding: 0;
 }
+@media screen and (min-width: 768px) {
+  .functioning__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: unset;
+    flex-wrap: wrap;
+  }
+}
 .functioning__text {
   font-size: 0.9rem;
   margin: 0.4rem;
@@ -206,6 +215,16 @@ p {
   border-radius: 1.5rem;
   background-color: whitesmoke;
   display: flex;
+}
+@media screen and (min-width: 768px) {
+  .functioning__li {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 875px) {
+  .functioning__li {
+    width: 30%;
+  }
 }
 .functioning__li::before {
   counter-increment: compteListe;
@@ -229,14 +248,27 @@ p {
 
 .restaurants {
   background-color: whitesmoke;
-  padding: 2rem;
+  padding: 1rem;
+}
+.restaurants__title {
+  margin: 2rem 0 1.2rem 0.7rem;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: unset;
+    align-items: unset;
+    flex-wrap: wrap;
+  }
 }
 
 .restaurant__card {
+  flex: 45%;
   position: relative;
   height: 330px;
   border-radius: 20px;
-  margin: 1.5rem 0;
+  margin: 0.7rem;
   text-decoration: none;
   background-color: white;
   box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.2);
@@ -308,11 +340,23 @@ p {
 }
 .restaurant__menuBtn .button {
   width: 195px;
+  margin: 0 1.5rem 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: unset;
+    flex-wrap: wrap;
+  }
 }
 
 .menu {
-  animation: menu-sequence ease-in-out 800ms forwards;
-  margin: 0.75rem;
+  animation: menu-sequence ease-in-out 2000ms forwards;
+  opacity: 0;
+  margin: 0 0.5rem 2rem 0.5rem;
 }
 .menu__title {
   position: relative;
@@ -324,7 +368,7 @@ p {
 }
 .menu__title::after {
   content: "";
-  width: 3rem;
+  width: 2.5rem;
   height: 0.25rem;
   background-color: #99E2D0;
   position: absolute;
@@ -332,37 +376,43 @@ p {
   bottom: 0;
 }
 .menu__detail {
+  box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.1);
   display: flex;
   background-color: white;
   border-radius: 1rem;
   margin: 0.9rem 0;
 }
+@media screen and (min-width: 768px) {
+  .menu__detail {
+    width: 358px;
+  }
+}
 .menu__detail__1 {
-  animation-delay: 300ms;
+  animation-delay: 1000ms;
 }
 .menu__detail__2 {
-  animation-delay: 600ms;
+  animation-delay: 2000ms;
 }
 .menu__detail__3 {
-  animation-delay: 900ms;
+  animation-delay: 3000ms;
 }
 .menu__detail__4 {
-  animation-delay: 1200ms;
+  animation-delay: 4000ms;
 }
 .menu__detail__5 {
-  animation-delay: 1500ms;
+  animation-delay: 5000ms;
 }
 .menu__detail__6 {
-  animation-delay: 1800ms;
+  animation-delay: 6000ms;
 }
 .menu__detail__7 {
-  animation-delay: 2100ms;
+  animation-delay: 7000ms;
 }
 .menu__detail__8 {
-  animation-delay: 2400ms;
+  animation-delay: 8000ms;
 }
 .menu__detail__9 {
-  animation-delay: 2700ms;
+  animation-delay: 9000ms;
 }
 .menu__detail__description {
   overflow: hidden;
@@ -380,12 +430,14 @@ p {
   overflow: hidden;
   white-space: nowrap;
   margin-top: 0.3rem;
+  font-size: 0.9rem;
 }
 .menu__detail__price {
   font-weight: 500;
+  font-size: 0.9rem;
   display: flex;
   align-items: flex-end;
-  margin: 0.75rem;
+  margin: 0.75rem 1.5rem;
 }
 .menu__detail__valid {
   display: flex;
