@@ -6,7 +6,6 @@
     font-size: 1.7em;
     cursor: pointer;
     transform: scale(0.75, 0.85);
-
     &__nobg {
         position: absolute;
         z-index:2;
@@ -17,16 +16,13 @@
             opacity:0;
         }
     }
-
     &__nobg:active + &__bg::after, &__nobg:hover + &__bg::after {
         transform: translateY(-100%) rotate(500deg);
     }
-
     &__bg {
         position: relative;
         z-index:1;
         background: linear-gradient(45deg, $color-secondary, $color-primary);
- //       background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
         -webkit-background-clip: text; // L'arrière-plan est limité (rogné) au texte en premier plan.
         background-clip: text;
         color: transparent;   
@@ -41,7 +37,6 @@
             width: 200%;
             background: white;
             border-radius: 25%;
-//          transform: translateY(0) rotate(0deg);
             transition: transform 1s ease-out;
         }
     } 
