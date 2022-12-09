@@ -5,7 +5,7 @@
 ## Site
 https://orden44.github.io/ohmyfood/
 
-## Techniologies
+## Technologies
 * HTML5
 * CSS3
 * SASS
