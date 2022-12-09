@@ -455,9 +455,18 @@ p {
 }
 
 .menu {
-  animation: menu-sequence ease-in-out 2000ms forwards;
+  animation: menu-sequence ease-in-out 1000ms forwards;
   opacity: 0;
   margin: 0 0.5rem 2rem 0.5rem;
+}
+.menu__1 {
+  animation-delay: 500ms;
+}
+.menu__2 {
+  animation-delay: 1000ms;
+}
+.menu__3 {
+  animation-delay: 1500ms;
 }
 .menu__title {
   position: relative;
@@ -487,33 +496,6 @@ p {
   .menu__detail {
     width: 358px;
   }
-}
-.menu__detail__1 {
-  animation-delay: 1000ms;
-}
-.menu__detail__2 {
-  animation-delay: 2000ms;
-}
-.menu__detail__3 {
-  animation-delay: 3000ms;
-}
-.menu__detail__4 {
-  animation-delay: 4000ms;
-}
-.menu__detail__5 {
-  animation-delay: 5000ms;
-}
-.menu__detail__6 {
-  animation-delay: 6000ms;
-}
-.menu__detail__7 {
-  animation-delay: 7000ms;
-}
-.menu__detail__8 {
-  animation-delay: 8000ms;
-}
-.menu__detail__9 {
-  animation-delay: 9000ms;
 }
 .menu__detail__description {
   overflow: hidden;
@@ -569,6 +551,7 @@ p {
 @keyframes menu-sequence {
   0% {
     opacity: 0;
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;

@@ -34,8 +34,13 @@
 }
 
 .menu {
-  animation: menu-sequence ease-in-out 2000ms forwards; 
+  animation: menu-sequence ease-in-out 1000ms forwards; 
   opacity: 0;
+  @for $i from 1 through 3 {
+    &__#{$i} {
+        animation-delay: 500ms * $i;
+     }
+  }
   margin: 0 0.5rem 2rem 0.5rem;
   &__title {
     position: relative;
@@ -63,11 +68,6 @@
     background-color: white;
     border-radius: 1rem;
     margin: 0.9rem 0;
-    @for $i from 1 to 10 {
-        &__#{$i} {
-            animation-delay: 1000ms * $i;
-         }
-    }
     &__description {
       overflow: hidden;
       padding: 0.75rem 0 0.75rem 0.75rem;
@@ -124,6 +124,7 @@
 @keyframes menu-sequence {
   0%{
       opacity:0;
+      transform: translateY(30px);
   }
   100% {
       opacity: 1;
