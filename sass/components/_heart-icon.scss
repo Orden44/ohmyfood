@@ -7,6 +7,7 @@
     cursor: pointer;
     transform: scale(0.75, 0.85);
     &__nobg {
+        background-color: $light-grey;
         position: absolute;
         z-index:2;
         color: $dark-grey;

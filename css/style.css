@@ -63,6 +63,7 @@ p {
   transform: scale(0.75, 0.85);
 }
 .heart-icon__nobg {
+  background-color: whitesmoke;
   position: absolute;
   z-index: 2;
   color: #363636;
@@ -207,6 +208,7 @@ p {
   padding: 1rem 0 0.5rem;
 }
 .header__icon {
+  color: black;
   position: absolute;
   left: 1.5rem;
   font-size: 1.3rem;
@@ -400,6 +402,9 @@ p {
   padding: 0.5rem;
   color: #363636;
 }
+.restaurant__card__description .heart-icon__nobg {
+  background-color: white;
+}
 .restaurant__card__content h3 {
   margin: 0 0 0.5rem 0.5rem;
 }
@@ -487,6 +492,7 @@ p {
 }
 .menu__detail {
   box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   display: flex;
   background-color: white;
   border-radius: 1rem;
@@ -544,7 +550,7 @@ p {
   border-radius: 100px;
 }
 .menu__detail:active .menu__detail__icon, .menu__detail:hover .menu__detail__icon {
-  transform: rotate(0);
+  transform: rotate(360deg);
   opacity: 1;
 }
 

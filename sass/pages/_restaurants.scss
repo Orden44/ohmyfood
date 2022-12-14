@@ -64,6 +64,7 @@
       width: 358px;
     }
     @include box-shadow(0.1);
+    overflow: hidden;
     display: flex;
     background-color: white;
     border-radius: 1rem;
@@ -115,7 +116,7 @@
       border-radius: 100px;
     }
     &:active &__icon, &:hover &__icon {
-      transform: rotate(0);
+      transform: rotate(360deg);
       opacity: 1;
     }
   }

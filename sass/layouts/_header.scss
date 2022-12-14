@@ -2,6 +2,7 @@
     @include flexbox(row, center, unset, unset);
     padding: 1rem 0 0.5rem;
     &__icon {
+        color: black;
         position: absolute;
         left: 1.5rem;
         font-size: 1.3rem; 
